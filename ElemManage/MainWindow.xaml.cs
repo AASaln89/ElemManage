@@ -101,7 +101,6 @@ namespace ElemManage
                 File.WriteAllText(saveFileDialog.FileName, textBox.Text);
             }
         }
-
         private void ExitApp(object sender, ExecutedRoutedEventArgs e)
         {
             Application.Current.Shutdown();
