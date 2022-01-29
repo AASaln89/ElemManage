@@ -4,8 +4,22 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ElemManage"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:sys1="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <col:ArrayList x:Key="fontName">
+            <sys1:String>Arial</sys1:String>
+            <sys1:String>Times New Roman</sys1:String>
+            <sys1:String>Verdana</sys1:String>
+        </col:ArrayList>
+        <col:ArrayList x:Key="fontSize">
+            <sys1:String>12</sys1:String>
+            <sys1:String>14</sys1:String>
+            <sys1:String>16</sys1:String>
+        </col:ArrayList>
+    </Window.Resources>
     <Window.CommandBindings>
         <CommandBinding Command="Open" Executed="OpenEx"/>
         <CommandBinding Command="Save" Executed="SaveEx"/>
@@ -32,15 +46,9 @@
         </Menu>
             <ToolBarTray Grid.Row="1">
             <ToolBar Margin="5" Padding="5">
-                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="ComboBox_SelectionChanged">
-                    <TextBlock Text="Arial"/>
-                    <TextBlock Text="Times New Roman"/>
-                    <TextBlock Text="Verdana"/>
+                <ComboBox ItemsSource="{StaticResource fontName }" Margin="5" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="ComboBox_SelectionChanged">
                 </ComboBox>
-                <ComboBox Margin="5" Padding="5" SelectedIndex="2" Width="50" SelectionChanged="ComboBox_SelectionChanged_1">
-                    <TextBlock Text="12"/>
-                    <TextBlock Text="14"/>
-                    <TextBlock Text="16"/>
+                <ComboBox ItemsSource="{StaticResource fontSize}" Margin="5" Padding="5" SelectedIndex="2" Width="50" SelectionChanged="ComboBox_SelectionChanged_1">
                 </ComboBox>
             </ToolBar>
             <ToolBar Margin="5" Padding="5">
