@@ -26,6 +26,20 @@ namespace ElemManage
         {
             InitializeComponent();
         }
+        private void Ligth_Click(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("LigthTheme.xaml", UriKind.Relative);
+            ResourceDictionary resource = Application.LoadComponent(uri) as ResourceDictionary;
+            Application.Current.Resources.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(resource);
+        }
+        private void Dark_Click(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("DarkTheme.xaml", UriKind.Relative);
+            ResourceDictionary resource = Application.LoadComponent(uri) as ResourceDictionary;
+            Application.Current.Resources.Clear();
+            Application.Current.Resources.MergedDictionaries.Add(resource);
+        }
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string fontName = (sender as ComboBox).Text;
