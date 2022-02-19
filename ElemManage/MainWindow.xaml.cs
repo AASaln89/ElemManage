@@ -42,7 +42,7 @@ namespace ElemManage
         }
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string fontName = (sender as ComboBox).Text;
+            string fontName = (string)(sender as ComboBox).SelectedItem;
             if (textBox != null)
             {
                 textBox.FontFamily = new FontFamily(fontName);
@@ -50,7 +50,7 @@ namespace ElemManage
         }
         private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            string fontSize = (sender as ComboBox).Text;
+            string fontSize = (string)(sender as ComboBox).SelectedItem;
             if (textBox != null)
             {
                 double fontSize1 = Convert.ToDouble (fontSize);
