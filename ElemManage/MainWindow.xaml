@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ElemManage"
         xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
-        xmlns:sys1="clr-namespace:System;assembly=mscorlib"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Style="{DynamicResource styleWindow}">
     <Window.CommandBindings>
