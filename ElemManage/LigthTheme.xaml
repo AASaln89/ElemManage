@@ -1,0 +1,30 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="styleWindow">
+        <Setter Property="Control.Background" Value="White"/>
+    </Style>
+    <Style x:Key="styleMenu" BasedOn="{StaticResource styleWindow}">
+        <Setter Property="Menu.Foreground" Value="Black"/>
+    </Style>
+    <Style x:Key="styleToolBar" BasedOn="{StaticResource styleWindow}">
+        <Setter Property="ToolBar.Foreground" Value="Black"/>
+    </Style>
+    <Style x:Key="styleTextBox" BasedOn="{StaticResource styleWindow}">
+        <Setter Property="TextBox.Foreground" Value="Black"/>
+    </Style>
+    <Style x:Key="styleComboBox" BasedOn="{StaticResource styleWindow}">
+        <Setter Property="ComboBox.Foreground" Value="Black"/>
+    </Style>
+    <Style x:Key="styleRadioButton" BasedOn="{StaticResource styleWindow}">
+        <Setter Property="RadioButton.Foreground" Value="Black"/>
+    </Style>
+    <Style x:Key="styleButton" BasedOn="{StaticResource styleWindow}">
+        <Setter Property="Button.Foreground" Value="Black"/>
+    </Style>
+    <Style x:Key="styleToolBarTray" BasedOn="{StaticResource styleWindow}">
+        <Setter Property="ToolBarTray.Background" Value="White"/>
+    </Style>
+    <Style x:Key="styleMenuItem" BasedOn="{StaticResource styleWindow}">
+        <Setter Property="MenuItem.Foreground" Value="Black"/>
+    </Style>
+</ResourceDictionary>

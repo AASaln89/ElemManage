@@ -4,8 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ElemManage"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Style="{DynamicResource styleWindow}">
     <Window.CommandBindings>
         <CommandBinding Command="Open" Executed="OpenEx"/>
         <CommandBinding Command="Save" Executed="SaveEx"/>
@@ -17,53 +19,53 @@
             <RowDefinition Height="auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Menu Margin="5" Padding="5">
+        <Menu Margin="5" Padding="5" Style="{DynamicResource styleMenu}">
             <MenuItem Header="_Файл">
-                <MenuItem Header="Открыть" Command="Open"/>
-                <MenuItem Header="Сохранить" Command="Save"/>
+                <MenuItem Header="Открыть" Command="Open" Style="{DynamicResource styleMenu}"/>
+                <MenuItem Header="Сохранить" Command="Save" Style="{DynamicResource styleMenu}"/>
                 <Separator/>
-                <MenuItem Header="Закрыть" Command="local:Commands_app.ExitApp"/>
+                <MenuItem Header="Закрыть" Command="local:Commands_app.ExitApp" Style="{DynamicResource styleMenu}"/>
+            </MenuItem>
+            <MenuItem Header="_Настройки">
+                <MenuItem Header="Светлая тема" x:Name="Ligth" Click="Ligth_Click" Style="{DynamicResource styleMenuItem}"/>
+                <MenuItem Header="Темная тема" x:Name="Dark" Click="Dark_Click" Style="{DynamicResource styleMenuItem}"/>
+                <Separator/>
+                <MenuItem Header="Параметры" Style="{DynamicResource styleMenu}"/>
             </MenuItem>
             <MenuItem Header="_Справка">
-                <MenuItem Header="O программе"/>
+                <MenuItem Header="O программе" Style="{DynamicResource styleMenu}"/>
                 <Separator/>
-                <MenuItem Header="Версия"/>`
+                <MenuItem Header="Версия" Style="{DynamicResource styleMenu}"/>`
             </MenuItem>
         </Menu>
-            <ToolBarTray Grid.Row="1">
-            <ToolBar Margin="5" Padding="5">
-                <ComboBox Margin="5" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="ComboBox_SelectionChanged">
-                    <TextBlock Text="Arial"/>
-                    <TextBlock Text="Times New Roman"/>
-                    <TextBlock Text="Verdana"/>
+        <ToolBarTray Grid.Row="1" Style="{DynamicResource styleToolBarTray}">
+            <ToolBar Margin="5" Padding="5" Style="{DynamicResource styleToolBar}">
+                <ComboBox Style="{DynamicResource styleComboBox}" ItemsSource="{StaticResource fontName }" Margin="5" Padding="5" SelectedIndex="0" Width="200" SelectionChanged="ComboBox_SelectionChanged">
                 </ComboBox>
-                <ComboBox Margin="5" Padding="5" SelectedIndex="2" Width="50" SelectionChanged="ComboBox_SelectionChanged_1">
-                    <TextBlock Text="12"/>
-                    <TextBlock Text="14"/>
-                    <TextBlock Text="16"/>
+                <ComboBox Style="{DynamicResource styleComboBox}" ItemsSource="{StaticResource fontSize}" Margin="5" Padding="5" SelectedIndex="2" Width="50" SelectionChanged="ComboBox_SelectionChanged_1">
                 </ComboBox>
             </ToolBar>
-            <ToolBar Margin="5" Padding="5">
-                <Button Click="Button_Click_1">
+            <ToolBar Margin="5" Padding="5" Style="{DynamicResource styleToolBar}">
+                <Button Click="Button_Click_1" Style="{DynamicResource styleButton}">
                     <Image Source="Image/Text italic.png" Width="35" Height="35"/>
                 </Button>
                 <Separator/>
-                <Button Click="Button_Click_2">
+                <Button Click="Button_Click_2" Style="{DynamicResource styleButton}">
                     <Image Source="Image/Text Underline.png" Width="35" Height="35"/>
                 </Button>
                 <Separator/>
-                <Button Click="Button_Click">
+                <Button Click="Button_Click" Style="{DynamicResource styleButton}">
                     <Image Source="Image/Text_bold.png" Width="35" Height="35"/>
                 </Button>
                 <Separator/>
             </ToolBar>
-            <ToolBar>
+            <ToolBar Style="{DynamicResource styleToolBar}">
                 <StackPanel VerticalAlignment="Center">
-                    <RadioButton Content="Черный" IsChecked="True" Checked="RadioButton_Checked"/>
-                    <RadioButton Content="Красный" Checked="RadioButton_Checked_1"/>
+                    <RadioButton Content="Черный" IsChecked="True" Checked="RadioButton_Checked" Style="{DynamicResource styleRadioButton}"/>
+                    <RadioButton Content="Красный" Checked="RadioButton_Checked_1" Style="{DynamicResource styleRadioButton}"/>
                 </StackPanel>
             </ToolBar>
         </ToolBarTray>
-        <TextBox x:Name="textBox" Grid.Row="2" Margin="5" Padding="5" FontSize="16" FontFamily="Arial" TextWrapping="Wrap"/>
+        <TextBox Style="{DynamicResource styleTextBox}" x:Name="textBox" Grid.Row="2" Margin="5" Padding="5" FontSize="16" FontFamily="Arial" TextWrapping="Wrap"/>
     </Grid>
 </Window>
