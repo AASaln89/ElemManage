@@ -3,13 +3,15 @@
                     xmlns:sys1="clr-namespace:System;assembly=mscorlib" 
                     xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
     <col:ArrayList x:Key="fontName">
-        <sys1:String> Arial </sys1:String>
-        <sys1:String> Times New Roman </sys1:String>
-        <sys1:String> Verdana </sys1:String>
+        <sys1:String>Arial</sys1:String>
+        <sys1:String>Times New Roman</sys1:String>
+        <sys1:String>Verdana</sys1:String>
     </col:ArrayList>
     <col:ArrayList x:Key="fontSize">
         <sys1:String>12</sys1:String>
         <sys1:String>14</sys1:String>
         <sys1:String>16</sys1:String>
+        <sys1:String>18</sys1:String>
+        <sys1:String>20</sys1:String>
     </col:ArrayList>
 </ResourceDictionary>
